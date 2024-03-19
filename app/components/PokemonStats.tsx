@@ -1,7 +1,7 @@
 "use client";
 
 import { Progress } from '@/components/ui/progress'
-import React, { useEffect, useState } from 'react'
+
 
 const PokemonStats = ({ pokemonObject }: any) => {
 
@@ -10,12 +10,6 @@ const PokemonStats = ({ pokemonObject }: any) => {
         <div>
             {pokemonObject.stats.map((pokemonStats: any) => {
                 const stats = pokemonStats.base_stat;
-                const [progress, setProgress] = useState(5)
-
-                useEffect(() => {
-                    const timer = setTimeout(() => setProgress(stats), 500)
-                    return () => clearTimeout(timer)
-                }, [pokemonStats.base_stat])
 
                 return (
                 <div key={pokemonObject.order} className="mb-3">
