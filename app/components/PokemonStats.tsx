@@ -15,7 +15,7 @@ const PokemonStats = ({ pokemonObject }: any) => {
                 useEffect(() => {
                     const timer = setTimeout(() => setProgress(stats), 500)
                     return () => clearTimeout(timer)
-                }, [])
+                }, [pokemonStats.base_stat])
 
                 return (
                 <div key={pokemonObject.order} className="mb-3">
