@@ -30,13 +30,13 @@ const PokemonInfo = ({ pokemonObject }: any) => {
             <div className="flex mr-3">
                 <span className="mr-1">Type:</span>
                 <ul className="flex flex-col text-center">
-                    {pokemonObject.types.map((pokemonType: any, index: number) => {
+                    {pokemonObject.types.map((pokemonType: any) => {
                         return (
                             <li className="rounded-lg px-1 mb-1"
                                 style={{
                                     backgroundColor: getBackgroundColor(pokemonType.type.name)
                                 }}
-                                key={index}
+                                key={pokemonObject.order}
                             >{pokemonType.type.name}</li>
                         );
                     })}
