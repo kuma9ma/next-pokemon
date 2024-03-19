@@ -22,7 +22,6 @@ async function PokemonPage({ params }: { params: { pokemonName: string } }) {
                             <span className="mr-2 font-medium text-xl">No:{pokemonObject.order}</span>
                             {pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}
                         </h2>
-                        <p>{pokemonObject.base_experience}</p>
                         <PokemonImage pokemonObject={pokemonObject} />
                         <PokemonInfo pokemonObject={pokemonObject} />
                     </div>

@@ -36,6 +36,7 @@ const PokemonInfo = ({ pokemonObject }: any) => {
                                 style={{
                                     backgroundColor: getBackgroundColor(pokemonType.type.name)
                                 }}
+                                key={pokemonObject.order}
                             >{pokemonType.type.name}</li>
                         );
                     })}
