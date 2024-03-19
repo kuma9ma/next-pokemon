@@ -4,7 +4,7 @@ const POKEAPI = "https://pokeapi.co/api/v2/"
 
 //すべてのポケモンの情報を取得
 export async function getAllPokemon() {
-    const response = await fetch(POKEAPI + "pokemon?limit=1302&offset=0");
+    const response = await fetch(POKEAPI + "pokemon?limit=151&offset=0");
     const data = await response.json();
     return data.results;
 }
