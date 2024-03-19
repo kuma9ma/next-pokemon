@@ -14,7 +14,7 @@ const PokemonStats = ({ pokemonObject }: any) => {
                 return (
                 <div key={pokemonObject.order} className="mb-3">
                     <p>{pokemonStats.stat.name}:{pokemonStats.base_stat}</p>
-                    <Progress value={progress} />
+                    <Progress value={pokemonStats.base_stat} />
                 </div>);
             })}
         </div>
